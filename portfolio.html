@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ragavi</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link href="portfolio.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+       <script src="https://kit.fontawesome.com/2538ba9e06.js" crossorigin="anonymous"></script>
+    </head>
+  <body>
+    <section id="header">
+      <div class="container-fluid container">
+        
+        <video autoplay loop muted plays-inline class="video1">
+          <source src="video.mp4" type="video/mp4">
+        </video>
+
+        <nav>
+          <h1 class="name">Ra<span>gavi.</span></h1>
+          <ul id="sidemenu">
+            <li><a href="#header" class="text-white">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#interests">Interests</a></li>
+            
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times-circle" onclick="closem()"></i>
+          </ul>
+          <i class="barm fas fa-bars " onclick="openm()"></i>
+          
+        </nav>
+
+        <div class="text-box">
+          <h1>I'm <span class="auto-input" style="color:gold"></span></h1>
+          <p>I am an undergraduate pursuing computer Science at VIT Chennai</p>
+          <a href="Ragavi-resume_new (1).pdf">Download CV</a>
+        </div>
+
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            
+        
+            var typed=new Typed(".auto-input",{
+            strings: ["Ragavi","a VITian","a nature-lover..","a programmer"],
+            typeSpeed:100,
+            backSpeed:100,
+           
+            loop: true
+            });
+
+        </script>
+        <script>
+          var side=document.getElementById("sidemenu");
+          var bar1=document.getElementsByClassName("barm");
+          function openm()
+          {
+            side.style.right="0";
+            bar1.style.display="none";
+          }
+          function closem()
+          {
+            side.style.right="-200px";
+          
+          }
+
+        </script>
+    </section>
+
+
+
+
+    <!--about me section-->
+    <section id="about">
+      <div class="container-fluid">
+        
+        <h1 class="text-ani">About me</h1>
+        <div class="row">
+          
+          <!--<div class="a-col1 container-fluid">
+            <!--<img src="images/user1.jpg" class="img-fluid">
+          </div>-->
+          <div class="a-col2 container-fluid">
+            <!--<h1 class="text-ani">About me</h1>-->
+            <p class="par1"><span style="color:gold;font-size:30px">I love </span><span class="auto-input1" style="color:aqua;font-size:30px"></span><br><br>
+            I was born and brought up in Chennai.I did my schooling in Chennai.Since,I was more passionate about coding and Web-development,I chose Computer science and Engineering at Vellore Institute of technology,Chennai.
+            I am well versed in Python ,C/C++, Java and Web development(MERN stack).I am a nature-enthusiast and have great interest towards organic farming.</p>
+
+            <div class="tab">
+              <p class="tab-link active-link" onclick="opentab('education')">Education</p>
+              <p class="tab-link " onclick="opentab('certificate')">Certificates</p>
+            </div>
+
+            <div class="tab-content active-tab" id="education">
+              <ul>
+                <li><span>2022-Current</span><br>Sophomore at VIT Chennai</li>
+                <li><span>2005-2020</span><br>Student at Ponvidyashram,chennai</li>
+              </ul>
+            </div>
+
+            <div class="tab-content" id="certificate">
+              <ul>
+                <li><span>IIT Bombay Certificate</span><br>
+                  <ul class="tab-list">
+                    <li>python</li>
+                    <li>C</li>
+                    <li>C++</li>
+                  </ul>
+                </li>
+                <li class="tab-list"><span>A1 Exam -Inlingua</span><br>Basic level German Exam</li>
+              </ul>
+            </div>
+
+          </div>
+
+          
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+            
+        
+            var typed=new Typed(".auto-input1",{
+            strings: ["coding","cooking","gardening"],
+            typeSpeed:100,
+            backSpeed:100,
+           
+            loop: true
+            });
+
+        </script>
+        <script>
+          var tabs=document.getElementsByClassName("tab-link");
+          var tabcont=document.getElementsByClassName("tab-content");
+          function opentab(tabname)
+          {
+              for(tab of tabs)
+              {
+                tab.classList.remove("active-link");
+              }
+              for(tabconts of tabcont)
+              {
+                tabconts.classList.remove("active-tab");
+              }
+              event.currentTarget.classList.add("active-link");
+              document.getElementById(tabname).classList.add("active-tab");
+          }
+
+        </script>
+    </section>
+
+    <!--interests section starts here-->
+    <section id="interests">
+      <div class="container-fluid">
+        <h1 class="text-ani" style="color:white">My Interests</h1>
+        <div class="interest-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>A security audit is a comprehensive assessment of your organization’s information system; typically, this assessment measures your information system’s security against an audit checklist of industry best practices, externally established standards, or federal regulations.</p>
+            <a href="#">Visit</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-figma text-center"></i>
+            <h2>UI/UX Design</h2>
+            <p>A security audit is a comprehensive assessment of your organization’s information system; typically, this assessment measures your information system’s security against an audit checklist of industry best practices, externally established standards, or federal regulations. </p>
+            <a href="#">Visit</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-chart-line"></i>
+            <h2>Entrepreneurship</h2>
+            <p>A security audit is a comprehensive assessment of your organization’s information system; typically, this assessment measures your information system’s security against an audit checklist of industry best practices, externally established standards, or federal regulations.</p>
+            <a href="#">Visit</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    
+
+    <!--contact page starts here-->
+    <section id="contact">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p>For further queries and questions You can message me to my email or fill the form.</p>
+            <p><i class="fa-solid fa-user"></i>Ragavi O G</p>
+            <p><i class="fa-solid fa-location-dot"></i>Chennai,India</p>
+            <p><i class="fa-solid fa-envelope"></i>ragaviog2002@gmail.com</p>
+            
+            <div class="social-icons">
+              <a href=""><i class="fa-brands fa-github"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+              
+            </div>
+            <a href="Ragavi-resume_new (1).pdf" download class="btn btn2">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+    
+
+  </body>
+</html>
